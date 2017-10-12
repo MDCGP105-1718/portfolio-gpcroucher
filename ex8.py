@@ -12,7 +12,7 @@ monthly_interest = current_savings * (0.04 / 12)
 monthly_salary = annual_salary / 12
 
 months_required = 0
-    while current_savings < portion_deposit * total_cost:  # while savings is less than deposit
+while current_savings < portion_deposit * total_cost:  # while savings is less than deposit
     for x in "abcdef": # runs six times
         current_savings += current_savings * (investment_return / 12)  # adds monthly interest
         current_savings += monthly_salary * portion_saved  # adds earnings
