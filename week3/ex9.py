@@ -13,15 +13,17 @@ counter = 0
 monthly_salary = initial_monthly_salary
 
 for x in range(1, 37):  # runs 36 times
-    current_savings += current_savings + current_savings * (annual_return / 12)  # adds monthly interest
+    current_savings += current_savings + (current_savings * (annual_return / 12))  # adds monthly interest
     current_savings += monthly_salary * 1  # adds a proportion of wages
     if x % 6 == 0:
         monthly_salary += monthly_salary * (semi_annual_raise / 12)
-if current_savings < (total_cost * downpayment_proportion):
+    print(current_savings)
+print(current_savings)
+if current_savings < downpayment:
     print("It is not possible to meet the downpayment in 36 months.")
 else:
     current_savings = 0
-    while (current_savings < downpayment-100) and (current_savings > downpayment+100):
+    while (downpayment-100 < current_savings < downpayment+100):
         print("attempt")
         if counter > 0:
             if current_savings > (total_cost * downpayment_proportion):
